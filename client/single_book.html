@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <script src="./scripts/single_book.js"></script>
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>My Books</title>
+  </head>
+  <body>
+
+
+    <div class="container">
+      <header>
+        <h1>My Library</h1>
+        <ul class="nav">
+          <a href="index.html"><li>Home</li></a>
+          <a href="books.html"><li>Books</li></a>
+          <a href="add_book.html"><li>Add a Book</li></a>
+          <a href="update_book.html"><li>Modify A Book</li></a>
+          <a href="remove_book.html"><li>Delete a Book</li></a>
+        </ul>
+      </header>
+      <div class="single_book">
+      </div>
+      <button class="btn red center" id="delete-button" type="button" name="delete">Remove Book</button>
+      <button class="btn blue center" id="update-button" type="button" name="update">Update Book</button>
+
+        <form class="hidden_form" action="books.html" method="put">
+          
+        </form>
+
+    </div>
+
+  </body>
+</html>
