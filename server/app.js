@@ -29,7 +29,6 @@ app.delete('/book/:id', (req, res)=>{
 })
 
 app.post('/books', (req, res)=>{
-  console.log(req.body);
   knex.insert({
     title: req.body.title,
     author: req.body.author,
@@ -38,7 +37,10 @@ app.post('/books', (req, res)=>{
     page_count: req.body.page_count
   }).into('book').then(()=>{
     console.log("successfully added book");
-  })
+    res.send("successfully added book")
+  }).catch(function(error){
+    res.send(error);
+  });
 })
 
 app.put('/book/:id', (req, res)=>{

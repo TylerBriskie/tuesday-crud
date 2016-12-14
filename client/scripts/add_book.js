@@ -1,17 +1,30 @@
 $(document).ready(function(){
 
-  $('#submit-book').click(function(e){
-    e.preventDefault();
+  $('#submit-book').click(function(event){
+    // event.preventDefault();
     let newBook = {};
     newBook.title = $('#book_title').val();
     newBook.author =$('#book_author').val();
     newBook.genre = $('#book_genre').val();
     newBook.page_count = $('#book_pages').val();
     newBook.image_url = $('#cover_art').val();
-    $.post('https://tdb-library.herokuapp.com/books/', newBook, function(result){
-        console.log(result);
-        window.location='/books.html'
+    if((newBook.title.length || newBook.author.length || newBook.genre.length
+      || newBook.page_count.length) === 0 ){
+        alert("Please Enter All Fields")
+      } else {
+      $.ajax({
+        url:'https://tdb-library.herokuapp.com/books/',
+        type:'POST',
+        data:newBook,
+        success: function(result){
+          alert("Book successfully added to database!");
+          window.location='/books.html'
+        },
+        fail: function(error){
+          console.log(error);
+        }
       });
-    });
+    }
+  });
 
 });
