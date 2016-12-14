@@ -8,11 +8,6 @@ const cors = require('cors');
 
 var port = (process.env.PORT || '3000');
 
-// app.use(function(req, res, next) {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   next();
-// });
-
 app.use(cors());
 
 app.get('/books',(req, res)=>{

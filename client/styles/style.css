@@ -23,6 +23,9 @@ header ul {
     padding-top:1em;
     margin-left:7em;
 }
+header a {
+  color:#26A69A;
+}
 #delete-button{
   text-align:center;
 }
