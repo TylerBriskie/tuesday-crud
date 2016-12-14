@@ -30,9 +30,8 @@ header a {
   text-align:center;
 }
 .thumbnail {
-  width:40%;
-  height:50%;
-  /*margin-left:25%;*/
+  width:165px;
+  height:270px;
 }
 .my_books{
   display:flex;
