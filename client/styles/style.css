@@ -67,6 +67,10 @@ h5 {
   font-size:1.5em;
 }
 
+p {
+  color:#26A69A;
+}
+
 .hidden_form {
   display:none;
 }
