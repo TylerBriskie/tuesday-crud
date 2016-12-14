@@ -13,6 +13,8 @@ $(document).ready(function(){
         alert("Please Enter All Fields");
       } else if (typeof Number(newBook.page_count) !== 'number'){
         alert("Make sure page count is a NUMBER");
+      } else if (!newBook.image_url.includes(".jpg"|| ".jpeg"||".png"){
+        newBook.image_url = "http://www.lisahughey.com/wp-content/uploads/2016/10/placeholder-cover-1.jpg"
       } else {
       $.ajax({
         url:'https://tdb-library.herokuapp.com/books/',
