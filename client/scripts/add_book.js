@@ -8,7 +8,7 @@ $(document).ready(function(){
     newBook.genre = $('#book_genre').val();
     newBook.page_count = $('#book_pages').val();
     newBook.image_url = $('#cover_art').val();
-    $.post('http://localhost:3000/books/', newBook, function(result){
+    $.post('https://tdb-library.herokuapp.com/books/', newBook, function(result){
         console.log(result);
         window.location='/books.html'
       });

@@ -1,6 +1,6 @@
 $(document).ready(function(){
   var whatBook = window.location.search.split('=')[1];
-  $.get('http://localhost:3000/book/'+whatBook, getThatBook, 'json');
+  $.get('https://tdb-library.herokuapp.com/book/'+whatBook, getThatBook, 'json');
   function getThatBook(data){
     $('.single_book').html('');
     $('.single_book').append(
@@ -44,7 +44,7 @@ $(document).ready(function(){
       newBook.image_url = $('#cover_art').val();
       console.log(newBook);
       $.ajax({
-        url:'http://localhost:3000/book/'+whatBook,
+        url:'https://tdb-library.herokuapp.com/book/'+whatBook,
         type:'PUT',
         data:newBook,
         success: function(result){
@@ -58,7 +58,7 @@ $(document).ready(function(){
     var userAnswer = confirm("This will REMOVE THE BOOK from the database!! are you sure?!");
     if (userAnswer == true){
       $.ajax({
-        url:'http://localhost:3000/book/'+whatBook,
+        url:'https://tdb-library.herokuapp.com/book/'+whatBook,
         type:'DELETE',
         success: function(result){
           console.log(result);
@@ -70,6 +70,7 @@ $(document).ready(function(){
   });
 
   $('#update-button').click(function(){
+    $("html, body").animate({ scrollTop: $(document).height() }, "slow");
     $('.hidden_form').fadeIn(1600);
   });
 

@@ -3,7 +3,7 @@ $(document).ready(function(){
 
   console.log('let\'s see those books');
 
-  $.get('http://localhost:3000/books/', populateBooks, 'json');
+  $.get('https://tdb-library.herokuapp.com/books/', populateBooks, 'json');
 
 
   function populateBooks(data){
