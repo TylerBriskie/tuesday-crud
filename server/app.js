@@ -35,9 +35,9 @@ app.post('/books', (req, res)=>{
     genre: req.body.genre,
     image_url: req.body.image_url,
     page_count: req.body.page_count
-  }).into('book').then(()=>{
-    console.log("successfully added book");
-    res.send("successfully added book")
+  }).into('book').then((victory)=>{
+    console.log("successfully added dat book");
+    res.send(victory);
   }).catch(function(error){
     res.send(error);
   });
