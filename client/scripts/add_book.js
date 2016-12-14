@@ -8,12 +8,12 @@ $(document).ready(function(){
     newBook.genre = $('#book_genre').val();
     newBook.page_count = $('#book_pages').val();
     newBook.image_url = $('#cover_art').val();
-    if((newBook.title.length || newBook.author.length || newBook.genre.length
-      || newBook.page_count.length) === 0 ){
-        alert("Please Enter All Fields");
-      } else if (typeof Number(newBook.page_count) !== 'number'){
-        alert("Make sure page count is a NUMBER");
-      } else {
+    // if((newBook.title.length || newBook.author.length || newBook.genre.length
+    //   || newBook.page_count.length) === 0 ){
+    //     alert("Please Enter All Fields");
+    //   } else if (typeof Number(newBook.page_count) !== 'number'){
+    //     alert("Make sure page count is a NUMBER");
+    //   } else {
       $.ajax({
         url:'https://tdb-library.herokuapp.com/books/',
         type:'POST',
@@ -26,7 +26,6 @@ $(document).ready(function(){
           console.log(error);
         }
       });
-      }
-  });
+      });
 
 });
