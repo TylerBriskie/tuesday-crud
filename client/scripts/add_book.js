@@ -13,7 +13,7 @@ $(document).ready(function(){
         alert("Please Enter All Fields");
       } else if (isNaN(newBook.page_count)){
         alert("Make sure page count is a NUMBER");
-      } else {
+      } else{
         $.ajax({
           url:'https://tdb-library.herokuapp.com/books/',
           type:'POST',

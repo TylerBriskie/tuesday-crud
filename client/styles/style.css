@@ -69,6 +69,10 @@ h5 {
 p {
   color:#26A69A;
 }
+.crud-buttons{
+  display:flex;
+  justify-content:space-around;
+}
 .not_found{
   text-align:center;
 }

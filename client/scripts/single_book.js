@@ -32,7 +32,9 @@ $(document).ready(function() {
       <div class="input-field col s6">
         <input id="cover_art" type="text" class="validate"value="${data[0].image_url}">
       </div>
-      <button class="btn waves-effect waves-light" id="update-book"type="submit">Submit</button>
+      <div class="crud-buttons">
+      <button class="btn green waves-effect waves-light" id="update-book"type="submit">Submit</button>
+      </div>
       `
         );
         $('#update-book').click(function(e) {
