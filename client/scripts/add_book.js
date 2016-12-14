@@ -11,7 +11,7 @@ $(document).ready(function(){
     if((newBook.title.length || newBook.author.length || newBook.genre.length
       || newBook.page_count.length) === 0 ){
         alert("Please Enter All Fields");
-      } else if (typeof newBook.page_count !== 'number'){
+      } else if (typeof Number(newBook.page_count) !== 'number'){
         alert("Make sure page count is a NUMBER");
       } else if (newBook.image_url.length===0){
         newBook.image_url = "http://www.lisahughey.com/wp-content/uploads/2016/10/placeholder-cover-1.jpg"
